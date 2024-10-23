@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmspgocqvogwa"]
+[gd_scene load_steps=5 format=3 uid="uid://bmspgocqvogwa"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_w7vd1"]
-[ext_resource type="PackedScene" uid="uid://dk00weakidn0l" path="res://ball.tscn" id="3_c8fm8"]
 [ext_resource type="PackedScene" uid="uid://o73shw2l8c5x" path="res://wall.tscn" id="4_f6fsj"]
+[ext_resource type="PackedScene" uid="uid://crpx7w7dspbiy" path="res://ballstriangle.tscn" id="4_h4o5f"]
+[ext_resource type="PackedScene" uid="uid://beoqsktf0iyvv" path="res://whiteball.tscn" id="4_qllvn"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_w7vd1")
@@ -27,66 +28,12 @@ position = Vector2(206, -137)
 [node name="StaticBody2D6" parent="." instance=ExtResource("4_f6fsj")]
 position = Vector2(-132, -136)
 
-[node name="Ball" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(95, 50)
-
-[node name="Ball2" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-13, 21)
-
-[node name="Ball3" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(139, -7)
-
-[node name="Ball4" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-121, 91)
-
-[node name="Ball5" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-154, -24)
-
-[node name="Ball6" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(78, 0)
-
-[node name="Ball7" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-30, -29)
-
-[node name="Ball8" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(122, -57)
-
-[node name="Ball9" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-138, 41)
-
-[node name="Ball10" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-171, -74)
-
-[node name="Ball11" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(137, 69)
-
-[node name="Ball12" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(29, 40)
-
-[node name="Ball13" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(181, 12)
-
-[node name="Ball14" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-79, 110)
-
-[node name="Ball15" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-112, -5)
-
-[node name="Ball16" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(137, 69)
-
-[node name="Ball17" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(29, 40)
-
-[node name="Ball18" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(181, 12)
-
-[node name="Ball19" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-79, 110)
-
-[node name="Ball20" parent="." instance=ExtResource("3_c8fm8")]
-position = Vector2(-112, -5)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(27, 31)
 zoom = Vector2(1.555, 1.555)
+
+[node name="WhiteBall" parent="." instance=ExtResource("4_qllvn")]
+position = Vector2(-103, 65)
+
+[node name="Node2D" parent="." instance=ExtResource("4_h4o5f")]
+position = Vector2(70, 24)

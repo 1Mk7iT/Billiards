@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://crpx7w7dspbiy"]
+
+[ext_resource type="PackedScene" uid="uid://dk00weakidn0l" path="res://ball.tscn" id="1_iwpcm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="1" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(16, 9)
+
+[node name="2" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(34, 20)
+
+[node name="3" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(72, -3)
+
+[node name="4" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(34, -3)
+
+[node name="5" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(53, 29)
+
+[node name="6" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(72, 39)
+
+[node name="7" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(53, -13)
+
+[node name="8" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(53, 8)
+
+[node name="9" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(71, -24)
+
+[node name="10" parent="." instance=ExtResource("1_iwpcm")]
+position = Vector2(72, 18)
