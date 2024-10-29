@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+var ball_name: String
+
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == 1:
 		if event.pressed:

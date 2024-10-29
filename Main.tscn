@@ -1,39 +1,59 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmspgocqvogwa"]
+[gd_scene load_steps=8 format=3 uid="uid://bmspgocqvogwa"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_w7vd1"]
-[ext_resource type="PackedScene" uid="uid://o73shw2l8c5x" path="res://wall.tscn" id="4_f6fsj"]
+[ext_resource type="PackedScene" uid="uid://c8pcrx3rpy3j2" path="res://Table.tscn" id="2_aprg1"]
 [ext_resource type="PackedScene" uid="uid://crpx7w7dspbiy" path="res://ballstriangle.tscn" id="4_h4o5f"]
 [ext_resource type="PackedScene" uid="uid://beoqsktf0iyvv" path="res://whiteball.tscn" id="4_qllvn"]
+[ext_resource type="PackedScene" uid="uid://b7q00kxer4q13" path="res://pocket.tscn" id="5_1wkvp"]
+[ext_resource type="Texture2D" uid="uid://0a0eh3nax6fv" path="res://Img/rule1.png" id="6_8kxa1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tf2o0"]
+size = Vector2(184, 452)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_w7vd1")
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("4_f6fsj")]
-position = Vector2(207, 218)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("4_f6fsj")]
-position = Vector2(-129, 218)
-
-[node name="StaticBody2D9" parent="." instance=ExtResource("4_f6fsj")]
-position = Vector2(-288, 28)
-rotation = -1.56304
-
-[node name="StaticBody2D11" parent="." instance=ExtResource("4_f6fsj")]
-position = Vector2(366, 31)
-rotation = -1.56304
-
-[node name="StaticBody2D5" parent="." instance=ExtResource("4_f6fsj")]
-position = Vector2(206, -137)
-
-[node name="StaticBody2D6" parent="." instance=ExtResource("4_f6fsj")]
-position = Vector2(-132, -136)
+[node name="Table" parent="." instance=ExtResource("2_aprg1")]
+position = Vector2(1108, 657)
+rotation = -3.14159
+scale = Vector2(1.42, 1.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(27, 31)
-zoom = Vector2(1.555, 1.555)
+position = Vector2(562, 233)
+zoom = Vector2(0.7, 0.7)
 
 [node name="WhiteBall" parent="." instance=ExtResource("4_qllvn")]
-position = Vector2(-103, 65)
+position = Vector2(257, 321)
 
-[node name="Node2D" parent="." instance=ExtResource("4_h4o5f")]
-position = Vector2(70, 24)
+[node name="BallsTriangle" parent="." instance=ExtResource("4_h4o5f")]
+position = Vector2(873, 313)
+
+[node name="Pocket" parent="." instance=ExtResource("5_1wkvp")]
+position = Vector2(74, 77)
+
+[node name="Pocket2" parent="." instance=ExtResource("5_1wkvp")]
+position = Vector2(553, 72)
+
+[node name="Pocket3" parent="." instance=ExtResource("5_1wkvp")]
+position = Vector2(1034, 77)
+
+[node name="Pocket4" parent="." instance=ExtResource("5_1wkvp")]
+position = Vector2(74, 570)
+
+[node name="Pocket5" parent="." instance=ExtResource("5_1wkvp")]
+position = Vector2(554, 579)
+
+[node name="Pocket6" parent="." instance=ExtResource("5_1wkvp")]
+position = Vector2(1035, 572)
+
+[node name="WhiteBallZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteBallZone"]
+position = Vector2(183, 322)
+shape = SubResource("RectangleShape2D_tf2o0")
+debug_color = Color(0.806498, 0.906326, 0.109475, 0.42)
+
+[node name="Rule1" type="Sprite2D" parent="."]
+position = Vector2(-1763, -282)
+scale = Vector2(3.05757, 2.87188)
+texture = ExtResource("6_8kxa1")

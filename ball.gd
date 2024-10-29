@@ -1,18 +1,18 @@
 extends RigidBody2D
 
-var number = self.name.to_int()
-var type
+var ball_name: String
 
-func _process(delta: float) -> void:
-	if (number <=9 and number != 8):
-		type = "linest"
-	else:
-		type = "fullest"
-	pass
+func _ready():
+	ball_name = name  
+	add_sprite()
 
-func getType():
-	return type
-	pass
-func getNumber():
-	return number
-	pass
+func add_sprite():
+	var sprite_path = "res://Img/Balls/" + ball_name + ".png" 
+	var sprite = Sprite2D.new()
+	sprite.texture = load(sprite_path)
+
+	# Встановлюємо розмір спрайта відповідно до розміру колізії
+	var scale_factor = Vector2(30, 30) / sprite.texture.get_size()  # Задайте бажаний розмір
+	sprite.scale = scale_factor
+
+	add_child(sprite)  
