@@ -1,51 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://crpx7w7dspbiy"]
+[gd_scene load_steps=3 format=3 uid="uid://crpx7w7dspbiy"]
 
+[ext_resource type="Script" path="res://ballstriangle.gd" id="1_8yigy"]
 [ext_resource type="PackedScene" uid="uid://dk00weakidn0l" path="res://ball.tscn" id="1_iwpcm"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(288, 236)
+script = ExtResource("1_8yigy")
 
 [node name="ball1" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(-65, -1)
+position = Vector2(0, 0)
 
 [node name="ball2" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(-4, 38)
+position = Vector2(61, 39)
 
 [node name="ball3" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(-36, 21)
+position = Vector2(29, 22)
 
 [node name="ball4" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(-36, -24)
+position = Vector2(29, -23)
 
 [node name="ball5" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(29, -17)
+position = Vector2(94, -16)
 
 [node name="ball6" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(-2, -39)
+position = Vector2(63, -38)
 
 [node name="ball7" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(29, 20)
+position = Vector2(94, 21)
 
 [node name="ball8" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(-6, -1)
+position = Vector2(65, 1)
 
 [node name="ball9" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(62, 1)
+position = Vector2(127, 2)
 
 [node name="ball10" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(28, 58)
+position = Vector2(93, 59)
 
 [node name="ball11" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(62, 40)
+position = Vector2(127, 41)
 
 [node name="ball12" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(32, -55)
+position = Vector2(97, -54)
 
 [node name="ball13" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(58, 81)
+position = Vector2(123, 82)
 
 [node name="ball14" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(65, -74)
+position = Vector2(130, -73)
 
 [node name="ball15" parent="." instance=ExtResource("1_iwpcm")]
-position = Vector2(63, -36)
+position = Vector2(128, -35)
