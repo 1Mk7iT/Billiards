@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8pcrx3rpy3j2"]
+[gd_scene load_steps=13 format=3 uid="uid://c8pcrx3rpy3j2"]
 
-[ext_resource type="Texture2D" uid="uid://b76nmgblxaq7j" path="res://Img/billImage.jpg" id="1_8ni86"]
+[ext_resource type="Texture2D" uid="uid://cm7nj6lns6vvg" path="res://Img/table.svg" id="1_jf3t7"]
+[ext_resource type="PackedScene" uid="uid://b7q00kxer4q13" path="res://pocket.tscn" id="2_lh4bx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27327"]
-size = Vector2(282, 47)
+size = Vector2(279.847, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rybj4"]
-size = Vector2(43, 286.5)
+size = Vector2(43, 290.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n41eq"]
 size = Vector2(60.2046, 20)
@@ -33,11 +34,12 @@ size = Vector2(95, 20)
 size = Vector2(20, 77.7818)
 
 [node name="Table" type="Node2D"]
+scale = Vector2(1.47961, 1.47961)
 
-[node name="BillImage" type="Sprite2D" parent="."]
-position = Vector2(390, 234)
-scale = Vector2(1.2752, 1.2752)
-texture = ExtResource("1_8ni86")
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(391, 236)
+scale = Vector2(1.52147, 1.53676)
+texture = ExtResource("1_jf3t7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -45,18 +47,15 @@ texture = ExtResource("1_8ni86")
 position = Vector2(225, 50)
 shape = SubResource("RectangleShape2D_27327")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(333, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(223, 50)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(558.235, 50.0133)
 shape = SubResource("RectangleShape2D_27327")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(332, 371)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(223, 50)
+position = Vector2(226, 50)
 shape = SubResource("RectangleShape2D_27327")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
@@ -73,7 +72,7 @@ position = Vector2(39.5, 233.75)
 shape = SubResource("RectangleShape2D_rybj4")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D5"]
-position = Vector2(741, 236)
+position = Vector2(741, 234.125)
 shape = SubResource("RectangleShape2D_rybj4")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
@@ -89,7 +88,7 @@ rotation = 0.785398
 shape = SubResource("RectangleShape2D_n41eq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D6"]
-position = Vector2(710, 425.786)
+position = Vector2(716, 426)
 rotation = 0.785398
 shape = SubResource("RectangleShape2D_n41eq")
 
@@ -116,7 +115,7 @@ rotation = -0.785398
 shape = SubResource("RectangleShape2D_atb35")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D7"]
-position = Vector2(750.68, 75.755)
+position = Vector2(751, 72)
 rotation = -0.785398
 shape = SubResource("RectangleShape2D_atb35")
 
@@ -169,3 +168,21 @@ shape = SubResource("RectangleShape2D_ff1rj")
 position = Vector2(29, 428)
 rotation = -0.785398
 shape = SubResource("RectangleShape2D_ff1rj")
+
+[node name="Pocket" parent="." instance=ExtResource("2_lh4bx")]
+position = Vector2(54, 56)
+
+[node name="Pocket2" parent="." instance=ExtResource("2_lh4bx")]
+position = Vector2(393, 50)
+
+[node name="Pocket3" parent="." instance=ExtResource("2_lh4bx")]
+position = Vector2(730, 56)
+
+[node name="Pocket4" parent="." instance=ExtResource("2_lh4bx")]
+position = Vector2(53, 410)
+
+[node name="Pocket5" parent="." instance=ExtResource("2_lh4bx")]
+position = Vector2(392, 414)
+
+[node name="Pocket6" parent="." instance=ExtResource("2_lh4bx")]
+position = Vector2(730, 410)

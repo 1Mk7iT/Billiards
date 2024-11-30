@@ -1,7 +1,7 @@
 extends Node2D
 
-var balls = ["ball1", "ball2", "ball3", "ball4", "ball5", "ball6", "ball7", "ball9", "ball10", "ball11", "ball12", "ball13", "ball14", "ball15"]  # Імена нод м'ячів на сцені
-var ball8 = "ball8"
+var balls = ["1", "2", "3", "4", "5", "6", "7", "9", "10", "11", "12", "13", "14", "15"]  # Імена нод м'ячів на сцені
+var ball8 = "8"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	shuffle_array(balls)

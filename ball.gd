@@ -7,7 +7,7 @@ func _ready():
 	add_sprite()
 
 func add_sprite():
-	var sprite_path = "res://Img/Balls/" + ball_name + ".png" 
+	var sprite_path = "res://Img/Balls/" + ball_name + ".svg" 
 	var sprite = Sprite2D.new()
 	sprite.texture = load(sprite_path)
 
