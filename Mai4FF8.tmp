@@ -50,3 +50,4 @@ texture = ExtResource("6_8kxa1")
 [node name="cue" parent="." node_paths=PackedStringArray("white_ball") instance=ExtResource("7_8lq4w")]
 script = ExtResource("8_2e1nt")
 white_ball = NodePath("../WhiteBall")
+cue_skins = Array[String]([])

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2k4veao47r7h"]
 
-[node name="Menu" type="Node2D"]
+[node name="OptionsMenu" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
 offset_left = 32.0

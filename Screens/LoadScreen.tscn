@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2exu6annt4eh"]
+
+[ext_resource type="Script" path="res://Screens/load_screen.gd" id="1_52r0k"]
+[ext_resource type="Texture2D" uid="uid://bfmr2jso3dijb" path="res://Img/backgrounds/globalback.png" id="1_tqqlf"]
+[ext_resource type="Texture2D" uid="uid://bl64pudlj4d6p" path="res://Img/backgrounds/background5.png" id="1_vm5cm"]
+
+[node name="LoadScreen" type="Node2D"]
+script = ExtResource("1_52r0k")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -2383.0
+offset_top = -884.0
+offset_right = 2307.0
+offset_bottom = 885.0
+texture = ExtResource("1_vm5cm")
+stretch_mode = 1
+
+[node name="Globalback" type="Sprite2D" parent="."]
+texture = ExtResource("1_tqqlf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.365, 0.365)
