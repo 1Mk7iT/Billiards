@@ -1,7 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8pcrx3rpy3j2"]
+[gd_scene load_steps=15 format=3 uid="uid://c8pcrx3rpy3j2"]
 
 [ext_resource type="Texture2D" uid="uid://cm7nj6lns6vvg" path="res://Img/table.svg" id="1_jf3t7"]
 [ext_resource type="PackedScene" uid="uid://b7q00kxer4q13" path="res://pocket.tscn" id="2_lh4bx"]
+[ext_resource type="PackedScene" uid="uid://crpx7w7dspbiy" path="res://ballstriangle.tscn" id="3_6m5oj"]
+[ext_resource type="PackedScene" uid="uid://beoqsktf0iyvv" path="res://whiteball.tscn" id="4_limxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27327"]
 size = Vector2(279.847, 47)
@@ -186,3 +188,9 @@ position = Vector2(392, 414)
 
 [node name="Pocket6" parent="." instance=ExtResource("2_lh4bx")]
 position = Vector2(730, 410)
+
+[node name="Node2D" parent="." instance=ExtResource("3_6m5oj")]
+position = Vector2(483.236, -14.8688)
+
+[node name="WhiteBall" parent="." instance=ExtResource("4_limxx")]
+position = Vector2(207.487, 234.521)

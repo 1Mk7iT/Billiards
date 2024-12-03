@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfuljt0ht4w3g"]
+
+[ext_resource type="Texture2D" uid="uid://dt2um4cwvshdu" path="res://Img/backgrounds/background1.png" id="1_1g5nb"]
+[ext_resource type="PackedScene" uid="uid://c8pcrx3rpy3j2" path="res://Table.tscn" id="2_t1fyq"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1238.0
+offset_top = -921.0
+offset_right = 2672.0
+offset_bottom = 1464.0
+texture = ExtResource("1_1g5nb")
+
+[node name="Table" parent="." instance=ExtResource("2_t1fyq")]
+position = Vector2(-24, -37)

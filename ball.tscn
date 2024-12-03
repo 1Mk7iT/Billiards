@@ -13,8 +13,8 @@ radius = 18.0
 position = Vector2(260, 217)
 physics_material_override = SubResource("PhysicsMaterial_clxky")
 gravity_scale = 0.0
-linear_damp = 0.3
-angular_damp = 0.3
+linear_damp = 0.5
+angular_damp = 0.5
 script = ExtResource("1_5bb2q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
