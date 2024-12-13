@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cparaa660vxrb"]
+
+[ext_resource type="Texture2D" uid="uid://b7kd2tlimf0xy" path="res://assets/background5.png" id="1_5vppv"]
+[ext_resource type="Texture2D" uid="uid://l145v71hebl4" path="res://assets/globalback.png" id="1_6aa0n"]
+
+[node name="GeneralScreen" type="CanvasLayer"]
+
+[node name="Background5" type="Sprite2D" parent="."]
+position = Vector2(600, 409.5)
+scale = Vector2(0.400127, 0.464104)
+texture = ExtResource("1_5vppv")
+
+[node name="Globalback" type="Sprite2D" parent="."]
+position = Vector2(601.25, 329.25)
+scale = Vector2(0.384725, 0.381854)
+texture = ExtResource("1_6aa0n")
