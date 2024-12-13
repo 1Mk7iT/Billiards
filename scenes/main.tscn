@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://u2scvlyupk0a"]
+[gd_scene load_steps=13 format=3 uid="uid://u2scvlyupk0a"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_0e5bp"]
 [ext_resource type="PackedScene" uid="uid://bu8l68d7tm2ta" path="res://scenes/table.tscn" id="1_kyu7g"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://56aitqm11pdc" path="res://scenes/hud.tscn" id="6_yg7l3"]
 [ext_resource type="PackedScene" uid="uid://cparaa660vxrb" path="res://scenes/generalScreen.tscn" id="7_0rdg1"]
 [ext_resource type="PackedScene" uid="uid://c3nkk4n8eh5rp" path="res://scenes/menu.tscn" id="8_h8bgk"]
+[ext_resource type="AudioStream" uid="uid://x8fd2bl03a2v" path="res://piano-background-music-115878.mp3" id="9_jdf26"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7mb7"]
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
@@ -33,6 +34,14 @@ offset_top = 678.0
 offset_right = 1200.0
 offset_bottom = 778.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_p7mb7")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -113.0
+offset_top = -34.0
+offset_right = 1314.0
+offset_bottom = 811.0
+text = "Click"
+flat = true
 
 [node name="Cue" parent="." instance=ExtResource("4_deyx0")]
 
@@ -75,4 +84,10 @@ process_mode = 2
 [node name="GeneralScreen" parent="." instance=ExtResource("7_0rdg1")]
 process_mode = 4
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(605, 354)
+stream = ExtResource("9_jdf26")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="shoot" from="Cue" to="." method="_on_cue_shoot"]

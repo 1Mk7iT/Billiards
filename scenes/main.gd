@@ -91,8 +91,6 @@ func hide_cue():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if not $Menu.visible:
-		show_cue()
 
 	var moving := false
 	#check that all balls have stopped moving
@@ -161,3 +159,10 @@ func loadStartScreen() -> void:
 func _on_timer_timeout() -> void:
 	hide_cue()
 	$GeneralScreen.hide()
+
+
+func _on_button_pressed() -> void:
+	if not $Menu.visible:
+		show_cue()
+		$Button.queue_free()
+	pass # Replace with function body.

@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://56aitqm11pdc"]
+[gd_scene load_steps=7 format=3 uid="uid://56aitqm11pdc"]
+
+[ext_resource type="Texture2D" uid="uid://cbticatw3xta8" path="res://assets/background4.png" id="1_6p3aa"]
+[ext_resource type="Texture2D" uid="uid://bci71py20r1dm" path="res://assets/restartbutton.png" id="2_wvsgl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wb10x"]
 bg_color = Color(0, 0.341176, 0.403922, 1)
@@ -11,14 +14,14 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl6vr"]
-bg_color = Color(0.431373, 0.14902, 0, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px81k"]
 bg_color = Color(0.615686, 0, 0.466667, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srxxe"]
 bg_color = Color(0.486275, 0.0941176, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl6vr"]
+bg_color = Color(0.431373, 0.14902, 0, 1)
 
 [node name="Hud" type="CanvasLayer"]
 
@@ -35,6 +38,11 @@ offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wb10x")
+
+[node name="Background4" type="Sprite2D" parent="ResultPanel"]
+position = Vector2(250, 150)
+scale = Vector2(0.426343, 0.450617)
+texture = ExtResource("1_6p3aa")
 
 [node name="ResultLabel" type="Label" parent="ResultPanel"]
 layout_mode = 1
@@ -58,14 +66,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -125.0
-offset_top = -125.0
-offset_right = 125.0
-offset_bottom = -50.0
+offset_left = -128.0
+offset_top = -139.0
+offset_right = 136.0
+offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_wl6vr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_px81k")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_srxxe")
-text = "RESTART"
+theme_override_styles/normal = SubResource("StyleBoxFlat_wl6vr")
+icon = ExtResource("2_wvsgl")
+flat = true
+expand_icon = true
