@@ -1,5 +1,4 @@
-res://scenes/hud.tscn
-res://scenes/main.tscn
-res://scenes/generalScreen.tscn
-res://scenes/menu.tscn
+res://scenes/pool_ball.tscn
 res://scenes/main.gd
+res://scenes/main.tscn
+res://scenes/cue.tscn

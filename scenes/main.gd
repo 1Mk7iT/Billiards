@@ -127,16 +127,20 @@ func potted_ball(body):
 		if lives == 0:
 			game_over("lose")
 	else:
-		#create new sprite to show potted ball
-		var b = Sprite2D.new()
-		add_child(b)
-		b.texture = body.get_node("Sprite2D").texture
-		potted.append(b)
-		b.position = Vector2(50 * potted.size(), 725)
-		body.queue_free()
-		#check for win condition
-		if potted.size() == 15:
-			game_over("win")
+		var ball_index = ball_images.find(body.get_node("Sprite2D").texture)
+		if ball_index == 7:
+			game_over("lose")
+		else:
+			var b = Sprite2D.new()
+			add_child(b)
+			b.texture = body.get_node("Sprite2D").texture
+			potted.append(b)
+			b.position = Vector2(50 * potted.size(), 725)
+			body.queue_free()
+			
+			if potted.size() == 15:
+				game_over("win")
+
 
 func game_over(outcome):
 	hide_cue()
